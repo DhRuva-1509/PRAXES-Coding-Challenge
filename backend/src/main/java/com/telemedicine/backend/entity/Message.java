@@ -47,7 +47,7 @@ public class Message {
             timestamp = LocalDateTime.now();
         }
         if(authorRole != null){
-            authorRole = author.toUpperCase();
+            authorRole = authorRole.toUpperCase();
         }
     }
 
