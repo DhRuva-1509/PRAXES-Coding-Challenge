@@ -11,11 +11,11 @@ A Spring Boot REST API for storing and retrieving messages from telemedicine con
 
 ### 1. Clone the Repository
 
-git clone 
-cd backend
+- git clone 
+- cd backend
 
 ### 2. Build and Run with Docker Compose
-docker-compose up –build
+- docker-compose up --build
 
 This single command will:
 - Build the Spring Boot application
