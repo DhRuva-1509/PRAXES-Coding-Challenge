@@ -1,0 +1,10 @@
+target/
+.mvn/
+.idea/
+*.iml
+.git/
+.gitignore
+*.md
+.DS_Store
+mvnw
+mvnw.cmd
