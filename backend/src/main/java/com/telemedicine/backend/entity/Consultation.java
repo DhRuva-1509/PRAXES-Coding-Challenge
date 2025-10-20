@@ -18,6 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Consultation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,17 +29,17 @@ public class Consultation {
     @Column(name = "doctor_id", nullable = false)
     private String doctorId;
 
-    @Column(name = "timestamp", nullable = false)
-    private LocalDateTime consultationDate;
+    @Column(name = "created_at", nullable = false)
+    private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "consultation", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Message> messages = new ArrayList<>();
 
     @PrePersist
-    protected  void onCreate(){
-        if(consultationDate == null){
-            consultationDate = LocalDateTime.now();
+    protected void onCreate() {
+        if (createdAt == null) {
+            createdAt = LocalDateTime.now();
         }
     }
 }

@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Message {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -43,12 +44,11 @@ public class Message {
 
     @PrePersist
     protected void onCreate() {
-        if(timestamp == null) {
+        if (timestamp == null) {
             timestamp = LocalDateTime.now();
         }
-        if(authorRole != null){
+        if (authorRole != null) {
             authorRole = authorRole.toUpperCase();
         }
     }
-
 }

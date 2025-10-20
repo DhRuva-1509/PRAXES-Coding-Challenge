@@ -1,9 +1,7 @@
 package com.telemedicine.backend.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -11,7 +9,7 @@ import lombok.NoArgsConstructor;
 public class ConsultationRequest {
 
     @NotBlank(message = "Patient ID is required")
-    private String parentId;
+    private String patientId;
 
     @NotBlank(message = "Doctor ID is required")
     private String doctorId;
